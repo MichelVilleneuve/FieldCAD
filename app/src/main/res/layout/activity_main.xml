@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:layout_margin="0dp"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    tools:context=".MainActivity"
+    android:splitMotionEvents="false">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        />
+
+    <!-- Page Name TextView at the top -->
+    <TextView
+        android:id="@+id/pageNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <!-- Custom Drawing View in the middle -->
+    <com.michelvilleneuve.fieldcad.MyCustomDrawingView
+        android:id="@+id/drawingView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/pageNameTextView"
+        android:layout_above="@id/buttonLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        tools:ignore="ObsoleteLayoutParam,SpeakableTextPresentCheck" />
+
+    <!-- Buttons Layout at the bottom -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:splitMotionEvents="false"
+        android:layout_alignParentBottom="true">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buttonFreehand"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/button_background"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/freehand"
+            android:checkable="true"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buttonAuto"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/button_background"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/line"
+            android:checkable="true"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buttonRectangle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/button_background"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/rectangle"
+            android:checkable="true"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buttonCircle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/button_background"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/circle"
+            android:checkable="true"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buttonArc"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/button_background"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/arc"
+            android:checkable="true"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buttonText"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/button_background"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/text"
+            android:checkable="true"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buttonEraseEffect"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/button_background"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/erase_effect"
+            android:checkable="true"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/buttonClear"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/button_background"
+            android:padding="8dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/clear"
+            android:checkable="true"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+</RelativeLayout>
